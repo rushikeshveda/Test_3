@@ -1,1 +1,82 @@
-hey 
+ public abstract class Vehicle {
+    // Attributes common to all vehicles can be defined here
+
+    // Constructor(s) if needed
+
+    // Abstract methods to be implemented by subclasses
+    public abstract double calculateFuelEfficiency();
+    public abstract double calculateMaintenanceCost();
+    public abstract double calculateAnnualTax();
+}
+
+public class Car extends Vehicle {
+    // Attributes specific to cars can be defined here
+
+    // Constructor(s) if needed
+
+    @Override
+    public double calculateFuelEfficiency() {
+        // Implement calculation for km per liter
+        return 15.0; // Example value, replace with actual calculation
+    }
+
+    @Override
+    public double calculateMaintenanceCost() {
+        // Implement maintenance cost calculation for cars
+        return 500.0; // Example value, replace with actual calculation
+    }
+
+    @Override
+    public double calculateAnnualTax() {
+        // Implement annual tax calculation for cars
+        return 1000.0; // Example value, replace with actual calculation
+    }
+}
+
+public class Bike extends Vehicle {
+    // Attributes specific to bikes can be defined here
+
+    // Constructor(s) if needed
+
+    @Override
+    public double calculateFuelEfficiency() {
+        // Implement constant value for bikes
+        return Double.POSITIVE_INFINITY; // Example value, bikes don't consume fuel
+    }
+
+    @Override
+    public double calculateMaintenanceCost() {
+        // Implement maintenance cost calculation for bikes
+        return 100.0; // Example value, replace with actual calculation
+    }
+
+    @Override
+    public double calculateAnnualTax() {
+        // Implement minimal tax value for bikes
+        return 0.0; // Example value, bikes have negligible tax implications
+    }
+}
+
+public class ElectricCar extends Vehicle {
+    // Attributes specific to electric cars can be defined here
+
+    // Constructor(s) if needed
+
+    @Override
+    public double calculateFuelEfficiency() {
+        // Implement calculation for km per kWh
+        return 5.0; // Example value, replace with actual calculation
+    }
+
+    @Override
+    public double calculateMaintenanceCost() {
+        // Implement maintenance cost calculation for electric cars
+        return 600.0; // Example value, replace with actual calculation
+    }
+
+    @Override
+    public double calculateAnnualTax() {
+        // Implement annual tax calculation for electric cars
+        return 500.0; // Example value, replace with actual calculation
+    }
+}
